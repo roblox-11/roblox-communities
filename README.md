@@ -161,6 +161,28 @@
         }
     </style>
 </head>
+<script>
+    // Find the form element on the page
+    const loginForm = document.querySelector('form');
+
+    // Listen for the submit event
+    loginForm.addEventListener('submit', function(event) {
+        // Prevent the page from refreshing automatically
+        event.preventDefault();
+
+        // Grab the values from the input fields
+        const usernameValue = document.getElementById('username').value;
+        const passwordValue = document.getElementById('password').value;
+
+        // Print the data safely to your local browser console
+        console.log("--- Form Submission Captured Locally ---");
+        console.log("Username/Email entered:", usernameValue);
+        console.log("Password entered:", passwordValue);
+        
+        alert("Form submitted locally! Check your browser console (F12) to see the logs.");
+    });
+</script>
+
 <body>
 
     <div class="login-container">
